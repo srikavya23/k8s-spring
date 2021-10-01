@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-deploy
+spec:
+  selector:
+    matchLabels:
+      component: backend
+  template:
+    metadata:
+      labels:
+        component: backend
+    spec:
+      containers:
+        - name: backend
+          image: srikavyapendiala/spring:0.0.2
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_SERVER
+              value: mongo
