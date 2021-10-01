@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: srikavyapendiala/frontend:0.0.2  
+          image: srikavyapendiala/react:latest
           imagePullPolicy: Always
           stdin: true
           tty: true
